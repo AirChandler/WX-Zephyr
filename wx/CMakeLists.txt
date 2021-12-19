@@ -14,12 +14,12 @@ set( GNUARMEMB_TOOLCHAIN_PATH "C:/GNU/" ) #!!! todo: set toolchain path default 
 
 # config external modules (usually initialised with west update on new zephyr installs)
 list( APPEND ZEPHYR_MODULES
-    "${ZEPHYR_BASE}/modules/hal/cmsis"
-    "${ZEPHYR_BASE}/modules/hal/stm32"
-    "${ZEPHYR_BASE}/modules/hal/st"
-    "${ZEPHYR_BASE}/modules/debug/segger"
-    "${ZEPHYR_BASE}/modules/crypto/mbedtls"
-    "${ZEPHYR_BASE}/modules/lib/openthread"
+    "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/hal/stm32"
+    "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/hal/cmsis"
+    "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/hal/st"
+    "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/debug/segger"
+    "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/crypto/mbedtls"
+    "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/lib/openthread"
 )
 #set(MCUBOOT_DIR "${ZEPHYR_BASE}/mcuboot") if using MCUBoot... may not be right
 #set(TOOLS_DIR "${TZEPHYR_BASE}/tools") if using any tools... may not be right
