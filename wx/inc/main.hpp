@@ -9,3 +9,5 @@
  * 
  */
 #include <zephyr.h>
+#include <kernel.h>
+#include <console/console.h>

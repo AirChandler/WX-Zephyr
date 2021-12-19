@@ -10,7 +10,7 @@ set( BOARD_ROOT ${ZEPHYR_BASE} )
 # config toolchain
 set( ZEPHYR_TOOLCHAIN_VARIANT gnuarmemb )
 #set (ZEPHYR_SDK_INSTALL_DIR "/home/zephyr-sdk-0.13.1")
-set( GNUARMEMB_TOOLCHAIN_PATH "C:/GNU/" ) #!!! todo: set toolchain path default from env if exists, expose as cmake config var 
+set( GNUARMEMB_TOOLCHAIN_PATH "C:/GNU/2021.07" ) #!!! todo: set toolchain path default from env if exists, expose as cmake config var 
 
 # config external modules (usually initialised with west update on new zephyr installs)
 list( APPEND ZEPHYR_MODULES
