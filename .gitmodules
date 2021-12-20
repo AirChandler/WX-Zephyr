@@ -19,3 +19,6 @@
 [submodule "zephyrproject/modules/crypto/mbedtls"]
 	path = zephyrproject/modules/crypto/mbedtls
 	url = https://github.com/zephyrproject-rtos/mbedtls.git
+[submodule "zephyrproject/modules/hal/nordic"]
+	path = zephyrproject/modules/hal/nordic
+	url = https://github.com/zephyrproject-rtos/hal_nordic.git

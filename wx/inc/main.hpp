@@ -11,3 +11,7 @@
 #include <zephyr.h>
 #include <kernel.h>
 #include <console/console.h>
+#if defined(CONFIG_SOC_STM32H735XX)
+	#include <stm32h7xx_hal.h>
+	#include <stm32h7xx_hal_gpio.h>
+#endif

@@ -10,11 +10,12 @@ set( BOARD_ROOT ${ZEPHYR_BASE} )
 # config toolchain
 set( ZEPHYR_TOOLCHAIN_VARIANT gnuarmemb )
 #set (ZEPHYR_SDK_INSTALL_DIR "/home/zephyr-sdk-0.13.1")
-set( GNUARMEMB_TOOLCHAIN_PATH "C:/GNU/2021.07" ) #!!! todo: set toolchain path default from env if exists, expose as cmake config var 
+set( GNUARMEMB_TOOLCHAIN_PATH "C:/GNU_Arm_Embedded_GCC" ) #!!! todo: set toolchain path default from env if exists, expose as cmake config var 
 
 # config external modules (usually initialised with west update on new zephyr installs)
 list( APPEND ZEPHYR_MODULES
     "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/hal/stm32"
+    "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/hal/nordic"
     "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/hal/cmsis"
     "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/hal/st"
     "${CMAKE_CURRENT_LIST_DIR}/../zephyrproject/modules/debug/segger"
@@ -29,10 +30,14 @@ project(wx_zephyr)
 
 list( APPEND SRCS
     "${PROJECT_SOURCE_DIR}/src/main.cpp"
+    "${PROJECT_SOURCE_DIR}/drivers/stm32/BSP/STM32H735G-DK/stm32h735g_discovery_lcd.c"
 )
 
 list( APPEND INCS
     "${PROJECT_SOURCE_DIR}/inc"
+    "${PROJECT_SOURCE_DIR}/drivers/stm32/BSP/STM32H735G-DK/"
+    "${PROJECT_SOURCE_DIR}/drivers/stm32/BSP/Components/Common"
+    "${PROJECT_SOURCE_DIR}/drivers/stm32/BSP/Components/rk043fn48h"
 )
 
 add_compile_options( -Wall -Wextra -Wno-unused-parameter -Wno-unused-variable )

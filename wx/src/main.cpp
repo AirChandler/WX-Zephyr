@@ -12,6 +12,9 @@
 
 void main(void)
 {
+	#if defined(CONFIG_SOC_STM32H735XX)
+		__GPIOC_CLK_ENABLE();
+	#endif
 	while(1){
 		printk("Hello World!\n");
 		k_msleep(1000);
